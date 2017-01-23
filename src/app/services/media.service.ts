@@ -6,14 +6,18 @@ import 'rxjs/add/operator/map';
 export class MediaService {
 
   constructor(private http: Http) { }
-
-  getAllMedia() {
+/*
+  getMedia() {
     this.http.get('http://media.mw.metropolia.fi/wbma/media/')
     .map((resp) => {
       return resp.json();
     });
   }
+*/
 
+  getMedia() {
+    return this.http.get('http://media.mw.metropolia.fi/wbma/media/');
+  }
 }
 
 
