@@ -18,14 +18,14 @@ export class ListMediaComponent implements OnInit {
   constructor(private mediaService: MediaService) { }
 
   ngOnInit() {
-    this.mediaService.getMedia().subscribe((res) {
+    this.mediaService.getMedia().subscribe((res) => {
       this.images = res.json();
       console.log(this.images);
     });
     this.mediaService.getRoutes("Gransinmäki").subscribe(
-      (res) => {
-        console.log(res);
-
+      (resp) => {
+        console.log(resp);
+        this.stops = resp.data.stops;
       });
   }
 
