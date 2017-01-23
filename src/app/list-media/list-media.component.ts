@@ -12,15 +12,20 @@ import { Component, OnInit, Injectable } from '@angular/core';
 export class ListMediaComponent implements OnInit {
 
   private routes: any = [];
+  private stops: any = [];
+  private images: any [];
 
   constructor(private mediaService: MediaService) { }
 
   ngOnInit() {
-
+    this.mediaService.getMedia().subscribe((res) {
+      this.images = res.json();
+      console.log(this.images);
+    });
     this.mediaService.getRoutes("Gransinmäki").subscribe(
       (res) => {
-        this.routes = res;
-        console.log(this.routes);
+        console.log(res);
+
       });
   }
 
