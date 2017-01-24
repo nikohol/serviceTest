@@ -14,6 +14,5 @@ export class LoginService {
     return this.http.post(url).map
     (resp => resp.json());
   }
-
-}
 */
+}
