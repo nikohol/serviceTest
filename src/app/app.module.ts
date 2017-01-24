@@ -6,11 +6,13 @@ import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { MediaService } from './services/media.service';
 import { ListMediaComponent } from './list-media/list-media.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ListMediaComponent
+    ListMediaComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
