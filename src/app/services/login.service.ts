@@ -5,10 +5,15 @@ import 'rxjs/add/operator/map';
 @Injectable()
 export class LoginService {
 
-  constructor(private http: Http) { }
-
+  constructor() { }
+/*
   postLogin() {
     const url: string = "http://media.mw.metropolia.fi/wbma/login";
+    const headers = new Headers ({'Content-Type': "application/json"});
+
+    return this.http.post(url).map
+    (resp => resp.json());
   }
 
 }
+*/

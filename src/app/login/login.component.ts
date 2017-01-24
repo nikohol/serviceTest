@@ -11,10 +11,12 @@ export class LoginComponent implements OnInit {
   constructor(private loginService: LoginService ) { }
 
   ngOnInit() {
-    this.loginService.postLogin().subscribe(
+    /*this.loginService.postLogin().subscribe(
       (resp) => {
         console.log(resp);
       });
+*/
   }
 
 }
+
